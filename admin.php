@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styless.css"/>
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body class="saza">
+  <header class="header">
+    <div class="logo">
+      <a href="#"> COMPUTER tracking system</a>
+      <div class="search_box">
+        <input type="text" placeholder="search serialNumber">
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    </div>
+  </header>
+  <div class="container">
+    <nav>
+      <div class="side_navbar">
+        <span>Main Menu</span>
+        <a href="admin.html" class="active"> Admin Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="history.html">History</a>
+        <a href="#">settings</a>
+        <a href="registration.html">register computer</a>
+        <a href="#">Update</a>
+        <a href="#">logout</a>
+
+      
+      </div>
+    </nav>
+
+    <section class="main">
+        <div class="main-top">
+          <h1>last checked Data</h1>
+          <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="main-skills">
+          <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Registered computer</h3>
+            <p>234
+             
+            </p>
+            
+            <!-- <button>Get Started</button> -->
+          </div>
+          <div class="card">
+            <!-- <i class="fa-solid fa-location-pin"></i> -->
+            <h3>active computer</h3>
+            <p>total:</p>
+            
+          </div>
+          <div class="card">
+            <i class="fa-solid fas-person-rifle"></i>
+            <h3>security officer</h3>
+            <p>name:</p>
+            
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-location-pin"></i>
+            <h3>Location</h3>
+            <p>ex:Muhabura gate</p>
+            
+          </div>
+          <div class="card">
+    
+            <h3>date</h3>
+            <p>dd</p>
+            
+          </div>
+        </div>
+
+      <div class="history_lists">
+        <div class="list1">
+          <div class="row">
+            <h4>History</h4>
+            <a href="#">See all</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>no</th>
+                <th>student regnumber</th>
+                <th> Student Name</th>
+                <th>Type of computer</th>
+                <th>serial number</th>
+                <th>Registered date </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>1</td>
+                <td>23223323</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td>
+                <td>sxssxs</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>21212322</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td> 
+                <td>sxssxs</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>21223223</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td>
+                <td>sxssxs</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2323233</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td>
+                <td>sxssxs</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2323232323</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td>
+                <td>sxssxs</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>32323233</td>
+                <td>ssss</td>
+                <td>hp</td>
+                <td>sxssxs</td>
+                <td>sxssxs</td>
+              </tr> -->
+          <?php
+          require ("server.php");
+          $result= mysqli_query($con,"SELECT* FROM computer");
+          while($row = mysqli_fetch_assoc($result))
+          {
+            echo "<tr><td>" .$row['id']."<td>" .$row['reg_number']."<td>" .$row['fname'].$row['lname']."<td>".$row['lname']."<td>".$row['serial_number']."<td>".$row['dates']."<td>"."</tr>";
+          }
+          ?>
+
+            </tbody>
+          </table>
+        </div>
+
+       
+  
